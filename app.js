@@ -10,7 +10,10 @@ app.get("/coins", async (req, res) => {
 		const interates = 3;
 
 		//let URL = "https://www.coingecko.com/";
-		const browser = await puppeteer.launch({headless:true});
+		const browser = await puppeteer.launch({
+            headless:false,
+            args: ["--no-sandbox"]
+        });
 		const page = await browser.newPage();
 
         let results,finalResult = [];
