@@ -25,7 +25,6 @@ app.get("/coins", async (req, res) => {
             await page.goto(URL,{timeout:0, waitUntil: "domcontentloaded"});
             await page.waitForSelector('nav.pagy-bootstrap-nav', { visible: true, timeout: 0 });
             //console.log(URL)
-            
 
             results = await page.evaluate( ()=>{
 			
