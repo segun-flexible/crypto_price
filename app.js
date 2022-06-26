@@ -11,8 +11,9 @@ app.get("/coins", async (req, res) => {
 
 		//let URL = "https://www.coingecko.com/";
 		const browser = await puppeteer.launch({
-            headless:false,
-            args: ["--no-sandbox"]
+            headless:true,
+            executablePath: '/usr/bin/chromium-browser',
+            args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"]
         });
 		const page = await browser.newPage();
 
