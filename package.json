@@ -1,0 +1,13 @@
+{
+  "name": "mine_and_earn",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "set NODE_ENV=dev && nodemon app.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "puppeteer": "^13.6.0"
+  }
+}
